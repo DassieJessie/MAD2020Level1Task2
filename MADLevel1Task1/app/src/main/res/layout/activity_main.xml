@@ -7,12 +7,210 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/idConjunction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/title"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/idB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/idA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/A"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/idB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idConjunction"
+        app:layout_constraintBottom_toTopOf="@id/idTrue1_1" />
+
+    <TextView
+        android:id="@+id/idB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/B"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/idFormula"
+        app:layout_constraintStart_toEndOf="@id/idA"
+        app:layout_constraintTop_toBottomOf="@id/idConjunction"
+        app:layout_constraintBottom_toTopOf="@id/idTrue1_2" />
+
+    <TextView
+        android:id="@+id/idFormula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/Formula"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/idAnswer1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/idB"
+        app:layout_constraintTop_toBottomOf="@id/idConjunction" />
+
+    <TextView
+        android:id="@+id/idTrue1_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/True"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/idA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/idTrue1_2"
+        app:layout_constraintBottom_toTopOf="@id/idTrue2_1"/>
+
+    <TextView
+        android:id="@+id/idTrue1_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/True"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/idTrue1_1"
+        app:layout_constraintTop_toBottomOf="@id/idB"
+        app:layout_constraintBottom_toTopOf="@id/idTrue2_2"
+        app:layout_constraintEnd_toStartOf="@id/idAnswer1"/>
+
+    <TextView
+        android:id="@+id/idTrue2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/True"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/idTrue2_2"
+        app:layout_constraintTop_toBottomOf="@id/idTrue1_1"
+        app:layout_constraintBottom_toTopOf="@id/idTrue3_1"/>
+
+    <TextView
+        android:id="@+id/idTrue2_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/False"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/idTrue2_1"
+        app:layout_constraintEnd_toStartOf="@id/idAnswer2"
+        app:layout_constraintTop_toBottomOf="@id/idTrue1_2"
+        app:layout_constraintBottom_toTopOf="@id/idTrue3_2"/>
+
+    <TextView
+        android:id="@+id/idTrue3_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/False"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/idTrue3_2"
+        app:layout_constraintTop_toBottomOf="@id/idTrue2_1"
+        app:layout_constraintBottom_toTopOf="@id/idTrue4_1"/>
+
+    <TextView
+        android:id="@+id/idTrue3_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/True"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/idTrue3_1"
+        app:layout_constraintEnd_toStartOf="@id/idAnswer3"
+        app:layout_constraintTop_toBottomOf="@id/idTrue2_2"
+        app:layout_constraintBottom_toTopOf="@id/idTrue4_2"/>
+
+    <TextView
+        android:id="@+id/idTrue4_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/False"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/idTrue4_2"
+        app:layout_constraintTop_toBottomOf="@id/idTrue3_1"
+        app:layout_constraintBottom_toTopOf="@id/idSubmit"/>
+
+    <TextView
+        android:id="@+id/idTrue4_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/False"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/idTrue4_1"
+        app:layout_constraintEnd_toStartOf="@id/idAnswer4"
+        app:layout_constraintTop_toBottomOf="@id/idTrue3_2"
+        app:layout_constraintBottom_toTopOf="@id/idSubmit"/>
+
+    <Button
+        android:id="@+id/idSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Submit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idTrue4_2"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText
+        android:id="@+id/idAnswer1"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/TextFill"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/idAnswer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/idTrue1_2"
+        app:layout_constraintTop_toBottomOf="@id/idFormula" />
+
+    <EditText
+        android:id="@+id/idAnswer2"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/TextFill"
+        android:inputType="textPersonName"
+        android:importantForAutofill="no"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/idAnswer3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/idTrue2_2"
+        app:layout_constraintTop_toBottomOf="@id/idAnswer1" />
+
+    <EditText
+        android:id="@+id/idAnswer3"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/TextFill"
+        android:inputType="textPersonName"
+        android:importantForAutofill="no"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/idAnswer4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/idTrue3_2"
+        app:layout_constraintTop_toBottomOf="@id/idAnswer2" />
+
+    <EditText
+        android:id="@+id/idAnswer4"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/TextFill"
+        android:inputType="textPersonName"
+        android:importantForAutofill="no"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/idSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/idTrue4_2"
+        app:layout_constraintTop_toBottomOf="@id/idAnswer3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
