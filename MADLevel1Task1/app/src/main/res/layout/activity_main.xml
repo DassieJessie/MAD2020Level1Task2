@@ -129,7 +129,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/idTrue4_2"
         app:layout_constraintTop_toBottomOf="@id/idTrue3_1"
-        app:layout_constraintBottom_toTopOf="@id/idSubmit"/>
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit"/>
 
     <TextView
         android:id="@+id/idTrue4_2"
@@ -140,10 +140,10 @@
         app:layout_constraintStart_toEndOf="@id/idTrue4_1"
         app:layout_constraintEnd_toStartOf="@id/idAnswer4"
         app:layout_constraintTop_toBottomOf="@id/idTrue3_2"
-        app:layout_constraintBottom_toTopOf="@id/idSubmit"/>
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit"/>
 
     <Button
-        android:id="@+id/idSubmit"
+        android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Submit"
@@ -207,7 +207,7 @@
         android:importantForAutofill="no"
         android:textAlignment="center"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@id/idSubmit"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/idTrue4_2"
         app:layout_constraintTop_toBottomOf="@id/idAnswer3" />

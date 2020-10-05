@@ -13,4 +13,7 @@
 
     <string name="Submit">Submit</string>
 
+    <string name="correctNumAnswers">The correct number of answers you got is: %d</string>
+    <string name="allCorrect">All %d answers are correct!</string>
+
 </resources>
